@@ -3,24 +3,27 @@
 #include <locale.h>
 using namespace std;
  
-class Node
+/// \file Ochered.cpp
+
+/// Struktura ocheredi
+struct Node
 {
-public:
     int number;
     Node* last;
     Node* next;
 };
  
+/// \fn osnovnaya functiya
 void main()
 {
     Node* head = NULL;
     Node* tail = NULL;
     Node* ptrLast = NULL;
     short action = -1;
- setlocale(LC_ALL,"rus");
+    setlocale(LC_ALL,"rus"); ///Vivod po russki
     while(1)
     {
-        cout<<"1. Добавить Элемент\n";
+        cout<<"1. Добавить Элемент\n";  ///Menu
         cout<<"2. Просмотр Очереди\n";
         cout<<"3. Удалить Элемент\n";
         cout<<"4. Поиск Элемента\n";
@@ -28,13 +31,13 @@ void main()
         cout<<"Ваш Выбор: ";
         cin>>action;
  
-        if (action == 0)
+        if (action == 0) ///Vixod iz programm
         {
             system("CLS");
             break;
         }
  
-        if (action == 1)
+        if (action == 1) ///Add element
         {
             system("CLS");
             int numb = -1;
@@ -59,7 +62,7 @@ void main()
             continue;
         }
  
-        if (action == 2)
+        if (action == 2)  ///Prosmotr ocheredi
         {
             system("CLS");
             Node* ptr = NULL;           
@@ -84,8 +87,8 @@ void main()
             system("CLS");
             continue;
         }
- 
-        if (action == 3)
+  
+        if (action == 3)   ///Delete element
         {
             system("CLS");
             Node* ptrDelete = NULL;
@@ -110,7 +113,7 @@ void main()
             continue;
         }
  
-        if (action == 4)
+        if (action == 4)  ///Poisk elementa
         {
             system("CLS");
             Node* ptr = NULL;
@@ -144,7 +147,7 @@ void main()
             continue;
         }
  
-        if (action > 4)
+        if (action > 4)  ///if vibrali ne iz menu
         {
             system("CLS");
             cout<<"\t!!! НЕВЕРНЫЙ ВЫБОР. ПОВТОРИТЕ ВВОД !!!\n\n";
